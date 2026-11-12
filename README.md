@@ -27,6 +27,65 @@ Turn a packaged set of specifications into working, enterprise-grade software �
 - Selected setup tools are resolved only when needed. OpenSpec can be installed globally with npm when the `openspec` method is selected, Spec Kit can be installed user-wide with `uv tool install` when the `speckit` method is selected, and Impeccable uses pinned `npx` setup execution when enabled. Setup never updates existing global tools without explicit interactive approval or `--ensure-tools`.
 - Restricted-network environments should either allowlist or mirror the pinned package sources used during setup, or preinstall the required tools before running setup with `--no-tool-downloads`. That flag disables setup-managed installs and pinned `npx` execution; it does not make missing tools optional.
 
+## Quick Start Scripts
+
+For convenience, this package includes startup scripts at the repository root:
+
+### `start.sh` - Startup Script
+
+Handles environment setup and dependency installation:
+
+```bash
+./start.sh
+```
+
+The script performs the following:
+1. Validates Node.js version (20.12+ required)
+2. Installs npm dependencies if needed
+3. Validates package structure (CLI entry point, manifest, payload)
+4. Displays available commands and usage instructions
+5. Includes graceful shutdown handling (trap SIGINT/SIGTERM)
+
+**Note:** Enterprise App Kit is a CLI orchestrator, not a persistent service. The startup script prepares the environment and displays available commands. Use `npx ent-app-kit setup` to configure agent workspaces.
+
+### `stop.sh` - Stop Script
+
+Gracefully stops any running processes tracked by the startup script:
+
+```bash
+./stop.sh
+```
+
+Both scripts are executable and include proper signal handling for clean shutdown.
+
+## Example: Customer Analysis System
+
+This package currently includes a complete payload for the **Customer Analysis System** - an Arabic-first periodic customer behavior analysis application for the General Administration of Customs – Abu Dhabi (DG-CC).
+
+**System Features:**
+- 7 specialized AI agents (AGN1-AGN7) with deterministic backbone
+- 8 MCP tools (TOL1-TOL8) with fixture-backed implementation
+- Arabic-first report generation (تقرير تحليل المتعاملين)
+- Mandatory approval gates (coverage validation, Section Head approval)
+- Fixture data for functional acceptance testing
+- Clean swap boundaries for future production integration
+
+**To build this system:**
+
+1. Run setup from workspace root:
+   ```bash
+   npx --yes --package ./ent-app-kit ent-app-kit setup --agent claude-code --method speckit --mode autopilot
+   ```
+
+2. Open Claude Code and run:
+   ```
+   Build the app kit.
+   ```
+
+The system will be built into `repos/customer-analysis/` as a complete Python CLI application with all agents, tools, fixtures, and tests.
+
+See `payload/README.md` for detailed system specifications.
+
 ## Quickstart
 
 Create or choose a workspace folder, put `ent-app-kit/` inside it, and open a terminal in that workspace root.
@@ -342,6 +401,53 @@ The container smoke uses Podman when available and falls back to Docker. It copi
 | `repos/` | Generated application code | Yes — it's your app |
 | `out/` | Generated reports | Generated |
 | `.kit-state/` | Workflow runtime state | No — managed by the workflow |
+
+## Security Considerations
+
+### Configuration File Trust
+
+Enterprise App Kit processes configuration files that must be trusted:
+
+- **`repos.yaml`** and **`manifest.yaml`** are trusted configuration files that should be under version control
+- These files control git repository URLs, workspace paths, and build-time behavior
+- Only use repos.yaml files from trusted sources — malicious configurations could attempt path traversal or command injection
+- SSH keys are recommended over HTTPS tokens for git authentication to avoid credential exposure in URLs
+
+### Built-in Security Protections
+
+The kit implements several security measures:
+
+1. **Path Traversal Prevention (CWE-22):**
+   - All workspace paths are validated to prevent directory traversal
+   - Paths are normalized and checked against workspace boundaries
+   - Symbolic links and encoded paths are validated
+
+2. **Command Injection Prevention (CWE-78):**
+   - Git URLs are validated against expected patterns
+   - Branch names must match git ref naming rules
+   - Shell metacharacters and command-like arguments are rejected
+
+3. **Credential Protection (CWE-209):**
+   - Git URLs are sanitized in error messages to mask embedded credentials
+   - Prefer SSH keys over embedding tokens in URLs
+
+4. **YAML Security (CWE-502):**
+   - YAML parsing includes alias count limits to prevent expansion attacks
+   - Unsafe YAML constructors are disabled by default
+   - Only parse YAML from trusted, version-controlled sources
+
+### Generated Code Security
+
+The framework generates code based on payload specifications. While the framework validates structure:
+
+- Review generated code before deployment to production
+- Verify security requirements (approval gates, audit trails, PII masking) are implemented
+- Run security scans on generated applications
+- Test authentication and authorization logic thoroughly
+
+### Reporting Security Issues
+
+To report security vulnerabilities in Enterprise App Kit itself, please contact the maintainers directly rather than opening public issues.
 
 ## Troubleshooting
 

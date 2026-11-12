@@ -1,0 +1,8 @@
+schema: appkit-repos-v1
+topology: mono
+repositories:
+  - name: customer-analysis
+    role: application
+    workspace_path: repos/customer-analysis
+    source: greenfield
+    description: Customer Analysis System for DG-CC Abu Dhabi - Arabic-first periodic customer behavior analysis implementing SOP sub-process DG-CH-01-03-01. Single monorepo containing Python 3.11 CLI application with 7 agents (AGN1-AGN7), 8 MCP tools (TOL1-TOL8), deterministic rule engine, and fixture-backed test infrastructure.

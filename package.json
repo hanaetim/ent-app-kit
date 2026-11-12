@@ -23,14 +23,15 @@
     "!openspec/"
   ],
   "scripts": {
-    "test": "npm run test:unit && npm run test:assets",
+    "test": "npm run test:unit && npm run test:integration && npm run test:assets",
     "test:unit": "node --test test/cli.test.js test/setup-modules.test.js test/setup-runtime.test.js",
+    "test:integration": "node --test test/payload-integration.test.js",
     "test:assets": "node --test test/assets.test.js",
     "coverage": "node --test --experimental-test-coverage --test-coverage-include=\"bin/**/*.js\" --test-coverage-include=\"src/**/*.js\" --test-coverage-exclude=\"test/**\" test/cli.test.js test/setup-modules.test.js test/setup-runtime.test.js",
     "typecheck": "tsc -p tsconfig.json",
     "test:smoke": "node test/smoke/smoke-local-package.mjs",
     "test:smoke:container": "node test/smoke/smoke-podman.mjs",
-    "validate": "npm run typecheck && npm run test:unit && npm run test:assets && npm run coverage && npm run test:smoke"
+    "validate": "npm run typecheck && npm run test:unit && npm run test:integration && npm run test:assets && npm run coverage && npm run test:smoke"
   },
   "engines": {
     "node": ">=20.12.0"
