@@ -1,0 +1,261 @@
+{
+  "generated_at": "2026-11-11T06:01:13+00:00",
+  "generated_by": "process-studio",
+  "implementation_bundle_manifest": {
+    "bundle_id": "current-snapshot",
+    "created_at": "1794376725853",
+    "snapshot_mode": "current",
+    "source_skill": "eaef-implementation-spec-generator",
+    "source_skill_version": ""
+  },
+  "payload": {
+    "blueprint_metadata": {
+      "chat_id": "1794374552162-j9oy3em",
+      "filename": "customer-analysis.md",
+      "injected_at": "2026-11-11T06:01:13+00:00",
+      "project_id": "1794224493631-0gv1g3f",
+      "s3_bucket": "icaps-eaef",
+      "s3_key": "outputs/teams/6ae453725d27bb4be28357cd/projects/1794224493631-0gv1g3f/chats/1794374552162-j9oy3em/v1/customer-analysis.md",
+      "schema": "process-studio-blueprint-source-v1",
+      "sha256": "08a730c9292c9f57d04357453241854d78fc0175f368083c981368947af512ed",
+      "source_type": "generated_chat_file",
+      "url": "https://icaps-eaef.s3.amazonaws.com/outputs/teams/6ae453725d27bb4be28357cd/projects/1794224493631-0gv1g3f/chats/1794374552162-j9oy3em/v1/customer-analysis.md?AWSAccessKeyId=AKIAZ5TC44JQHERZ7GWU&Signature=%2FqLcUNNHmrmFKcfIXg6kMmHzOcU%3D&Expires=1794981673"
+    },
+    "generated_file_count": 9,
+    "generated_files": [
+      {
+        "bytes": 3510,
+        "canonical": "README-implementation.md",
+        "filename": "README-implementation.md",
+        "payload_path": "payload/README-implementation.md",
+        "relative_path": "README-implementation.md",
+        "s3_bucket": "icaps-eaef",
+        "s3_key": "outputs/teams/6ae453725d27bb4be28357cd/projects/1794224493631-0gv1g3f/chats/1794374552162-j9oy3em/v1/README-implementation.md",
+        "source_filename": "README-implementation.md",
+        "source_path": "README-implementation.md"
+      },
+      {
+        "bytes": 9441,
+        "canonical": "agent-register.md",
+        "filename": "agent-register.md",
+        "payload_path": "payload/agent-register.md",
+        "relative_path": "agent-register.md",
+        "s3_bucket": "icaps-eaef",
+        "s3_key": "outputs/teams/6ae453725d27bb4be28357cd/projects/1794224493631-0gv1g3f/chats/1794374552162-j9oy3em/v1/agent-register.md",
+        "source_filename": "agent-register.md",
+        "source_path": "agent-register.md"
+      },
+      {
+        "bytes": 5382,
+        "canonical": "business-rules.md",
+        "filename": "business-rules.md",
+        "payload_path": "payload/business-rules.md",
+        "relative_path": "business-rules.md",
+        "s3_bucket": "icaps-eaef",
+        "s3_key": "outputs/teams/6ae453725d27bb4be28357cd/projects/1794224493631-0gv1g3f/chats/1794374552162-j9oy3em/v1/business-rules.md",
+        "source_filename": "business-rules.md",
+        "source_path": "business-rules.md"
+      },
+      {
+        "bytes": 8103,
+        "canonical": "data-contracts.md",
+        "filename": "data-contracts.md",
+        "payload_path": "payload/data-contracts.md",
+        "relative_path": "data-contracts.md",
+        "s3_bucket": "icaps-eaef",
+        "s3_key": "outputs/teams/6ae453725d27bb4be28357cd/projects/1794224493631-0gv1g3f/chats/1794374552162-j9oy3em/v1/data-contracts.md",
+        "source_filename": "data-contracts.md",
+        "source_path": "data-contracts.md"
+      },
+      {
+        "bytes": 6161,
+        "canonical": "implementation-brief.md",
+        "filename": "implementation-brief.md",
+        "payload_path": "payload/implementation-brief.md",
+        "relative_path": "implementation-brief.md",
+        "s3_bucket": "icaps-eaef",
+        "s3_key": "outputs/teams/6ae453725d27bb4be28357cd/projects/1794224493631-0gv1g3f/chats/1794374552162-j9oy3em/v1/implementation-brief.md",
+        "source_filename": "implementation-brief.md",
+        "source_path": "implementation-brief.md"
+      },
+      {
+        "bytes": 3970,
+        "canonical": "integration-decisions.md",
+        "filename": "integration-decisions.md",
+        "payload_path": "payload/integration-decisions.md",
+        "relative_path": "integration-decisions.md",
+        "s3_bucket": "icaps-eaef",
+        "s3_key": "outputs/teams/6ae453725d27bb4be28357cd/projects/1794224493631-0gv1g3f/chats/1794374552162-j9oy3em/v1/integration-decisions.md",
+        "source_filename": "integration-decisions.md",
+        "source_path": "integration-decisions.md"
+      },
+      {
+        "bytes": 4944,
+        "canonical": "mcp-tool-register.md",
+        "filename": "mcp-tool-register.md",
+        "payload_path": "payload/mcp-tool-register.md",
+        "relative_path": "mcp-tool-register.md",
+        "s3_bucket": "icaps-eaef",
+        "s3_key": "outputs/teams/6ae453725d27bb4be28357cd/projects/1794224493631-0gv1g3f/chats/1794374552162-j9oy3em/v1/mcp-tool-register.md",
+        "source_filename": "mcp-tool-register.md",
+        "source_path": "mcp-tool-register.md"
+      },
+      {
+        "bytes": 395,
+        "canonical": "repos.yaml",
+        "filename": "repos.yaml",
+        "payload_path": "payload/repos.yaml",
+        "relative_path": "repos.yaml",
+        "s3_bucket": "icaps-eaef",
+        "s3_key": "outputs/teams/6ae453725d27bb4be28357cd/projects/1794224493631-0gv1g3f/chats/1794374552162-j9oy3em/v1/repos.yaml",
+        "source_filename": "repos.yaml",
+        "source_path": "repos.yaml"
+      },
+      {
+        "bytes": 5250,
+        "canonical": "scope-decisions.md",
+        "filename": "scope-decisions.md",
+        "payload_path": "payload/scope-decisions.md",
+        "relative_path": "scope-decisions.md",
+        "s3_bucket": "icaps-eaef",
+        "s3_key": "outputs/teams/6ae453725d27bb4be28357cd/projects/1794224493631-0gv1g3f/chats/1794374552162-j9oy3em/v1/scope-decisions.md",
+        "source_filename": "scope-decisions.md",
+        "source_path": "scope-decisions.md"
+      }
+    ],
+    "implementation_file_count": 9,
+    "implementation_files": [
+      {
+        "bytes": 3510,
+        "canonical": "README-implementation.md",
+        "filename": "README-implementation.md",
+        "payload_path": "payload/README-implementation.md",
+        "relative_path": "README-implementation.md",
+        "s3_bucket": "icaps-eaef",
+        "s3_key": "outputs/teams/6ae453725d27bb4be28357cd/projects/1794224493631-0gv1g3f/chats/1794374552162-j9oy3em/v1/README-implementation.md",
+        "source_filename": "README-implementation.md",
+        "source_path": "README-implementation.md"
+      },
+      {
+        "bytes": 9441,
+        "canonical": "agent-register.md",
+        "filename": "agent-register.md",
+        "payload_path": "payload/agent-register.md",
+        "relative_path": "agent-register.md",
+        "s3_bucket": "icaps-eaef",
+        "s3_key": "outputs/teams/6ae453725d27bb4be28357cd/projects/1794224493631-0gv1g3f/chats/1794374552162-j9oy3em/v1/agent-register.md",
+        "source_filename": "agent-register.md",
+        "source_path": "agent-register.md"
+      },
+      {
+        "bytes": 5382,
+        "canonical": "business-rules.md",
+        "filename": "business-rules.md",
+        "payload_path": "payload/business-rules.md",
+        "relative_path": "business-rules.md",
+        "s3_bucket": "icaps-eaef",
+        "s3_key": "outputs/teams/6ae453725d27bb4be28357cd/projects/1794224493631-0gv1g3f/chats/1794374552162-j9oy3em/v1/business-rules.md",
+        "source_filename": "business-rules.md",
+        "source_path": "business-rules.md"
+      },
+      {
+        "bytes": 8103,
+        "canonical": "data-contracts.md",
+        "filename": "data-contracts.md",
+        "payload_path": "payload/data-contracts.md",
+        "relative_path": "data-contracts.md",
+        "s3_bucket": "icaps-eaef",
+        "s3_key": "outputs/teams/6ae453725d27bb4be28357cd/projects/1794224493631-0gv1g3f/chats/1794374552162-j9oy3em/v1/data-contracts.md",
+        "source_filename": "data-contracts.md",
+        "source_path": "data-contracts.md"
+      },
+      {
+        "bytes": 6161,
+        "canonical": "implementation-brief.md",
+        "filename": "implementation-brief.md",
+        "payload_path": "payload/implementation-brief.md",
+        "relative_path": "implementation-brief.md",
+        "s3_bucket": "icaps-eaef",
+        "s3_key": "outputs/teams/6ae453725d27bb4be28357cd/projects/1794224493631-0gv1g3f/chats/1794374552162-j9oy3em/v1/implementation-brief.md",
+        "source_filename": "implementation-brief.md",
+        "source_path": "implementation-brief.md"
+      },
+      {
+        "bytes": 3970,
+        "canonical": "integration-decisions.md",
+        "filename": "integration-decisions.md",
+        "payload_path": "payload/integration-decisions.md",
+        "relative_path": "integration-decisions.md",
+        "s3_bucket": "icaps-eaef",
+        "s3_key": "outputs/teams/6ae453725d27bb4be28357cd/projects/1794224493631-0gv1g3f/chats/1794374552162-j9oy3em/v1/integration-decisions.md",
+        "source_filename": "integration-decisions.md",
+        "source_path": "integration-decisions.md"
+      },
+      {
+        "bytes": 4944,
+        "canonical": "mcp-tool-register.md",
+        "filename": "mcp-tool-register.md",
+        "payload_path": "payload/mcp-tool-register.md",
+        "relative_path": "mcp-tool-register.md",
+        "s3_bucket": "icaps-eaef",
+        "s3_key": "outputs/teams/6ae453725d27bb4be28357cd/projects/1794224493631-0gv1g3f/chats/1794374552162-j9oy3em/v1/mcp-tool-register.md",
+        "source_filename": "mcp-tool-register.md",
+        "source_path": "mcp-tool-register.md"
+      },
+      {
+        "bytes": 395,
+        "canonical": "repos.yaml",
+        "filename": "repos.yaml",
+        "payload_path": "payload/repos.yaml",
+        "relative_path": "repos.yaml",
+        "s3_bucket": "icaps-eaef",
+        "s3_key": "outputs/teams/6ae453725d27bb4be28357cd/projects/1794224493631-0gv1g3f/chats/1794374552162-j9oy3em/v1/repos.yaml",
+        "source_filename": "repos.yaml",
+        "source_path": "repos.yaml"
+      },
+      {
+        "bytes": 5250,
+        "canonical": "scope-decisions.md",
+        "filename": "scope-decisions.md",
+        "payload_path": "payload/scope-decisions.md",
+        "relative_path": "scope-decisions.md",
+        "s3_bucket": "icaps-eaef",
+        "s3_key": "outputs/teams/6ae453725d27bb4be28357cd/projects/1794224493631-0gv1g3f/chats/1794374552162-j9oy3em/v1/scope-decisions.md",
+        "source_filename": "scope-decisions.md",
+        "source_path": "scope-decisions.md"
+      }
+    ],
+    "source_file_count": 2,
+    "source_files": [
+      {
+        "bytes": 89193,
+        "payload_path": "payload/blueprint/blueprint.md",
+        "relative_path": "blueprint/blueprint.md",
+        "sha256": "08a730c9292c9f57d04357453241854d78fc0175f368083c981368947af512ed",
+        "source_category": "backend-injected-blueprint",
+        "source_filename": "customer-analysis.md"
+      },
+      {
+        "bytes": 770,
+        "payload_path": "payload/blueprint/blueprint-metadata.json",
+        "relative_path": "blueprint/blueprint-metadata.json",
+        "source_category": "backend-injected-blueprint-metadata",
+        "source_filename": "blueprint-metadata.json"
+      }
+    ]
+  },
+  "process_studio": {
+    "chat_id": "1794374552162-j9oy3em",
+    "project_id": "1794224493631-0gv1g3f"
+  },
+  "schema": "process-studio-enterprise-app-kit-provenance-v1",
+  "template": {
+    "engine": {
+      "air_schema": "v1",
+      "appkit_schema": "v1",
+      "name": "enterprise-app-kit",
+      "version": "0.2.0"
+    },
+    "schema": "process-studio-enterprise-app-kit-template-v1"
+  }
+}

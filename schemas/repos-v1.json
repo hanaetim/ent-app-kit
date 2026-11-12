@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "appkit-repos-v1",
+  "title": "Enterprise App Kit Repository Topology",
+  "type": "object",
+  "required": ["schema", "topology", "repositories"],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "appkit-repos-v1"
+    },
+    "topology": {
+      "type": "string",
+      "enum": ["mono", "multi"]
+    },
+    "repositories": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "role", "workspace_path", "source"],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "role": {
+            "type": "string",
+            "minLength": 1
+          },
+          "workspace_path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source": {
+            "type": "string",
+            "enum": ["greenfield", "brownfield"]
+          },
+          "description": {
+            "type": "string"
+          },
+          "remote": {
+            "type": "string",
+            "minLength": 1
+          },
+          "branch": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}

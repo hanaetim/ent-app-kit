@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spec Kit Workflow"
+  short_description: "Build full apps slice-by-slice with Spec Kit"
+  default_prompt: "Use $speckit-workflow to derive product delivery slices from my artifacts, then run one Spec Kit workflow per slice."

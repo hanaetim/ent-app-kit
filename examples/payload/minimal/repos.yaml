@@ -1,0 +1,13 @@
+schema: appkit-repos-v1
+topology: multi
+repositories:
+  - name: backend
+    role: backend
+    workspace_path: repos/backend
+    source: greenfield
+    description: Backend service for application APIs, orchestration, persistence, integration boundaries, and backend tests.
+  - name: frontend
+    role: frontend
+    workspace_path: repos/frontend
+    source: greenfield
+    description: Frontend application for the user experience, design-system implementation, and frontend tests.

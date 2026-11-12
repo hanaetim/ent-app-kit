@@ -1,0 +1,8 @@
+payload/**/*
+!payload/*/
+!**/.gitkeep
+.claude
+.codex
+openspec/
+.DS_Store
+node_modules/

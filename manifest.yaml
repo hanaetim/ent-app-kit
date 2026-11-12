@@ -1,0 +1,27 @@
+schema: appkit-manifest-v1
+
+kit:
+  name: enterprise-app-kit
+  version: 0.2.0
+  appkit_schema: v1
+  air_schema: v1
+
+provider: process_studio
+
+supported_sdd_methods:
+  - speckit
+  - openspec
+
+supported_agents:
+  - claude-code
+  - codex
+  - ibm-bob
+  - kiro
+
+defaults:
+  agent: ibm-bob
+  method: speckit
+
+integrity:
+  signing: none
+  sbom: none

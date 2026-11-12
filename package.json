@@ -1,0 +1,51 @@
+{
+  "name": "ent-app-kit",
+  "version": "0.2.0",
+  "description": "Enterprise App Kit setup CLI.",
+  "type": "module",
+  "bin": {
+    "ent-app-kit": "./bin/ent-app-kit.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "skills/",
+    "schemas/",
+    "examples/",
+    "payload/.gitkeep",
+    "payload/design/.gitkeep",
+    "payload/skills/.gitkeep",
+    "manifest.yaml",
+    "README.md",
+    "!**/__pycache__/",
+    "!**/*.pyc",
+    "!test/",
+    "!openspec/"
+  ],
+  "scripts": {
+    "test": "npm run test:unit && npm run test:assets",
+    "test:unit": "node --test test/cli.test.js test/setup-modules.test.js test/setup-runtime.test.js",
+    "test:assets": "node --test test/assets.test.js",
+    "coverage": "node --test --experimental-test-coverage --test-coverage-include=\"bin/**/*.js\" --test-coverage-include=\"src/**/*.js\" --test-coverage-exclude=\"test/**\" test/cli.test.js test/setup-modules.test.js test/setup-runtime.test.js",
+    "typecheck": "tsc -p tsconfig.json",
+    "test:smoke": "node test/smoke/smoke-local-package.mjs",
+    "test:smoke:container": "node test/smoke/smoke-podman.mjs",
+    "validate": "npm run typecheck && npm run test:unit && npm run test:assets && npm run coverage && npm run test:smoke"
+  },
+  "engines": {
+    "node": ">=20.12.0"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@clack/prompts": "^1.7.0",
+    "ajv": "^8.20.0",
+    "yaml": "^2.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "typescript": "^7.0.2"
+  },
+  "overrides": {
+    "fast-uri": "4.2.3"
+  }
+}
