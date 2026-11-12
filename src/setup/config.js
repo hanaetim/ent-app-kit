@@ -29,6 +29,11 @@ export function validatePackageSchemas(kitRoot) {
 }
 
 export function readYamlFile(filePath, label = filePath) {
+  // SECURITY: repos.yaml and manifest.yaml are trusted configuration files that
+  // must be under version control. Do not use this function to parse user-uploaded
+  // or untrusted YAML content. The yaml library does not enable unsafe constructors
+  // by default, and maxAliasCount limits alias expansion attacks (CWE-502).
+  
   let text;
   try {
     text = fs.readFileSync(filePath, "utf8");
